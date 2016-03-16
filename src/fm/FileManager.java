@@ -100,6 +100,10 @@ public class FileManager {
 	}
 }
 
+/**
+ * @author jeff, aidz
+ * Environment class: defines the current environment
+ */
 class Environment {
 	
 	private String prompt;
