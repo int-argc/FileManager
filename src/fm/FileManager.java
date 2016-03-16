@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * @author jeff
- *
+ * @author jeff, aidz
+ * Main class for File Manager application
  */
 public class FileManager {
 	
