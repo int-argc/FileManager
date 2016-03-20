@@ -90,6 +90,15 @@ public class FileManager {
 					}
 					
 					break;
+				case "see":
+					// error checking!!!!
+					try {
+						programs.see(arguments[0]);
+					} catch (Exception e) {
+						System.out.println("error");	// ayusin
+					}
+					
+					break;
 				default:
 					System.out.println("INVALID COMMAND");
 					break;

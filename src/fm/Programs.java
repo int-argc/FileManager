@@ -1,6 +1,9 @@
 package fm;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -97,6 +100,31 @@ public class Programs {
 	
 	// view contents of file
 	public boolean see(Solomon theProf) {
+		return true;
+	}
+	
+	public boolean see(String path) throws IOException {
+		BufferedReader br;
+		try {
+			br = new BufferedReader(new FileReader(path));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("FILE NOT FOUND!");
+			return false;
+		}
+		try {
+			StringBuilder sb = new StringBuilder();
+			String line = br.readLine();
+			
+			while(line != null) {
+				sb.append(line + "\n");
+				line = br.readLine();
+			}
+			String content = sb.toString();
+			System.out.println(content);
+		} finally {
+			br.close();
+		}
 		return true;
 	}
 	
