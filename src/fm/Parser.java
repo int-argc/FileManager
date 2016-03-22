@@ -40,13 +40,4 @@ public class Parser {
 		return arguments;
 	}
 	
-	@Override
-	public String toString() {
-		String argsStr = "";
-		for (String arg : arguments) {
-			argsStr += arg + ",";
-		}
-		return "command = " + getCommand() + "\n" + "args = " + argsStr;
-	}
-	
 }
